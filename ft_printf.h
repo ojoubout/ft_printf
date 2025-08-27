@@ -15,14 +15,16 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdio.h>
-# include "libft/libft.h"
+# include "../libft.h"
 
 ssize_t		ft_putstr(char *s);
 ssize_t		ft_putnbr(long n);
+ssize_t		ft_putlnbr(long n);
 ssize_t		ft_conversion_c(char c);
 ssize_t		ft_conversion_s(char *s);
 ssize_t		ft_conversion_p(void *p);
 ssize_t		ft_conversion_d_i(int n);
+ssize_t		ft_conversion_l_d(long n);
 ssize_t		ft_conversion_u(unsigned int n);
 ssize_t		ft_conversion_x(unsigned int n, char x);
 int			ft_flags(char **f);

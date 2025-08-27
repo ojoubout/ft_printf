@@ -20,10 +20,11 @@ ssize_t	ft_conversion_s(char *s)
 {
 	if (s == 0)
 		s = ft_strdup("(null)");
-	if (g_precision >= 0 && g_precision < ft_strlen(s))
+	if (g_precision >= 0 && g_precision < (int) ft_strlen(s))
 	{
-		free(s);
+		char *tmp = s;
 		s = ft_strdup(s);
+		free(tmp);
 		s[g_precision] = '\0';
 	}
 	g_precision = -1;

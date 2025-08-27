@@ -48,7 +48,6 @@ int		ft_flag_number(char **f)
 int		ft_flags(char **f)
 {
 	int		size;
-	int		num;
 
 	size = -1;
 	if (**f == '*' || (**f > 48 && **f < 58))

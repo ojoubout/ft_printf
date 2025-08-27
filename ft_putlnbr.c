@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uitoa.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojoubout <ojoubout@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 14:57:30 by ojoubout          #+#    #+#             */
-/*   Updated: 2019/10/21 12:13:54 by ojoubout         ###   ########.fr       */
+/*   Created: 2019/10/11 13:15:30 by ojoubout          #+#    #+#             */
+/*   Updated: 2019/10/31 11:36:28 by ojoubout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char		*ft_special_cases()
 	return (str);
 }
 
-char			*ft_uitoa(unsigned int n)
+char			*ft_ltoa(long n)
 {
 	int		count;
 	char	*num;
@@ -39,4 +39,14 @@ char			*ft_uitoa(unsigned int n)
 		n /= 10;
 	}
 	return (num);
+}
+
+ssize_t ft_putlnbr(long n)
+{
+	char *s;
+
+	s = ft_ltoa(n);
+	s = ft_strprs(s);
+	s = ft_strzero(s);
+	return (ft_putstr(s));
 }

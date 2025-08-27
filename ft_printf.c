@@ -37,6 +37,8 @@ int			ft_args(char **f)
 		size = ft_conversion_p(va_arg(g_args, void *));
 	else if (**f == 'd' || **f == 'i')
 		size = ft_conversion_d_i(va_arg(g_args, int));
+	else if (**f == 'l' && (*f)++ && **f == 'd')
+		size = ft_conversion_l_d(va_arg(g_args, long));
 	else if (**f == 'u')
 		size = ft_conversion_u(va_arg(g_args, unsigned int));
 	else if (**f == 'x' || **f == 'X')
@@ -60,7 +62,6 @@ void		ft_reset(void)
 int			ft_printf(const char *format, ...)
 {
 	char	*f;
-	char	*str;
 	int		size;
 
 	size = 0;

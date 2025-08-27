@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_conversion_d_i.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojoubout <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ojoubout <ojoubout@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 12:50:23 by ojoubout          #+#    #+#             */
-/*   Updated: 2019/10/09 12:50:25 by ojoubout         ###   ########.fr       */
+/*   Created: 2019/10/12 11:53:15 by ojoubout          #+#    #+#             */
+/*   Updated: 2019/10/16 17:49:45 by ojoubout         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_bzero(void *s, size_t n)
+ssize_t	ft_conversion_l_d(long n)
 {
-	return (ft_memset(s, 0, n));
+	return (ft_putlnbr(n));
 }
